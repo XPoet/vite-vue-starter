@@ -1,2 +1,2 @@
-const x = 'commitizen'
+const x = 'commitlint'
 console.log(x)

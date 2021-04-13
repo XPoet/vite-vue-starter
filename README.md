@@ -1,27 +1,45 @@
-# Vue 3 + Typescript + Vite
+# vite2.x + vue3 + TypeScript starter
 
-This template should help get you started developing with Vue 3 and Typescript in Vite.
+[![Author](https://img.shields.io/badge/author-XPoet-orange.svg)](https://github.com/XPoet)
+[![License](https://img.shields.io/github/license/XPoet/vite-vue3-starter.svg)](https://github.com/XPoet/vite-vue3-starter/blob/master/LICENSE)
+[![Stars](https://img.shields.io/github/stars/XPoet/vite-vue3-starter)](https://github.com/XPoet/vite-vue3-starter)
+[![Deploy](https://github.com/XPoet/vite-vue3-starter/workflows/deploy/badge.svg)](https://github.com/XPoet/vite-vue3-starter/actions/workflows/deploy.yml)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-Airbnb-hotpink.svg)](https://github.com/lin-123/javascript)
 
-## Recommended IDE Setup
+![demo](https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/vite-vue3/image.60j460o44fo0.png)
 
-[VSCode](https://code.visualstudio.com/) + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur). Make sure to enable `vetur.experimental.templateInterpolationService` in settings!
+## Technology stack
+- [TypeScript v4.x](https://www.typescriptlang.org/zh/)
+- [Vite v2.x](https://vitejs.dev/)
+- [Vue v3.x](https://v3.cn.vuejs.org/)
+- [Vue Router v4.x](https://next.router.vuejs.org/zh/index.html)
+- [Vuex v4.x](https://next.vuex.vuejs.org/)
+- [Element Plus](https://element-plus.org/#/zh-CN)
+- [Stylus](https://stylus-lang.com/)
+- [Axios](https://axios-http.com/)
 
-### If Using `<script setup>`
+## Get start
 
-[`<script setup>`](https://github.com/vuejs/rfcs/pull/227) is a feature that is currently in RFC stage. To get proper IDE support for the syntax, use [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) instead of Vetur (and disable Vetur).
+### Project setup
 
-## Type Support For `.vue` Imports in TS
+```sh
+npm install
+# or
+yarn add
+```
+### Compiles and hot-reloads for development
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can use the following:
 
-### If Using Volar
+```sh
+npm run dev
+```
 
-Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
+### Compiles and minifies for production
+```sh
+npm run build
+```
 
-### If Using Vetur
+## License
 
-1. Install and add `@vuedx/typescript-plugin-vue` to the [plugins section](https://www.typescriptlang.org/tsconfig#plugins) in `tsconfig.json`
-2. Delete `src/shims-vue.d.ts` as it is no longer needed to provide module info to Typescript
-3. Open `src/main.ts` in VSCode
-4. Open the VSCode command palette
-5. Search and run "Select TypeScript version" -> "Use workspace version"
+MIT Copyright © 2021 XPoet
+

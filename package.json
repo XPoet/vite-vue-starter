@@ -2,7 +2,7 @@
   "name": "vite-vue3-starter",
   "version": "0.0.1",
   "private": false,
-  "description": "A Vite Vue3 TypeScript template starter",
+  "description": "A Vite2.x + Vue3 + TypeScript template starter",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

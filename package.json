@@ -1,6 +1,8 @@
 {
   "name": "vite-vue3-starter",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "private": false,
+  "description": "A Vite Vue3 TypeScript template starter",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
@@ -10,8 +12,29 @@
     "lint-fix": "eslint --fix ./src --ext .vue,.js,.ts",
     "prepare": "husky install"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/XPoet/vite-vue3-starter.git"
+  },
+  "keywords": [
+    "Vite",
+    "Vue3",
+    "TypeScript",
+    "Starter"
+  ],
+  "author": "XPoet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/XPoet/vite-vue3-starter/issues"
+  },
+  "homepage": "https://github.com/XPoet/vite-vue3-starter#readme",
   "lint-staged": {
     "*.{vue,js,ts}": "eslint --fix"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -42,10 +65,5 @@
     "typescript": "^4.1.3",
     "vite": "^2.1.5",
     "vue-tsc": "^0.0.15"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }

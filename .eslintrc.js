@@ -18,7 +18,8 @@ module.exports = {
   rules: {
     'import/no-unresolved': 'off',
     'import/extensions': 'off',
-    'import/no-absolute-path': 'off'
+    'import/no-absolute-path': 'off',
+    'import/no-extraneous-dependencies': 'off'
   },
   settings: {}
 }

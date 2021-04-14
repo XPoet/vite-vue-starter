@@ -41,6 +41,11 @@ export default defineComponent({
           name: 'Axios',
           isActive: false,
           path: '/axios'
+        },
+        {
+          name: 'Test',
+          isActive: false,
+          path: '/test'
         }
       ],
 

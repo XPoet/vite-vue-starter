@@ -1,6 +1,6 @@
 <template>
   <div class="vuex-container page-container">
-    <div class="page-title">Vuex Test</div>
+    <div class="page-title">Vuex Test Page</div>
     <p>store count is: {{ count }}</p>
     <p>store double is: {{ double }}</p>
     <el-button type="primary" @click="add">add</el-button>

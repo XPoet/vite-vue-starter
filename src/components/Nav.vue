@@ -84,7 +84,7 @@ export default defineComponent({
 
 <style scoped lang="stylus">
 
-@import "../style.styl"
+@import "../style/basic.styl"
 
 .nav {
   position relative

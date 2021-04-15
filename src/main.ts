@@ -7,6 +7,6 @@ import store from './store/index'
 
 import 'element-plus/lib/theme-chalk/index.css'
 
-import './style.styl'
+import './style/basic.styl'
 
 createApp(App).use(router).use(store).use(ElementPlus).mount('#app')

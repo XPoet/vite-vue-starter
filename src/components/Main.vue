@@ -34,7 +34,7 @@ export default defineComponent({
 
 <style scoped lang="stylus">
 
-@import "../style.styl"
+@import "../style/basic.styl"
 
 $top-height = 60px
 $left-side-width = 80px

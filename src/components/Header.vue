@@ -1,8 +1,6 @@
 <template>
   <div class="header">
-    <div class="title" @click="router.push('/')">
-      Vite2.x + Vue3.x + TypeScript Starter
-    </div>
+    <div class="title" @click="router.push('/')">Vite2.x + Vue3.x + TypeScript Starter</div>
   </div>
 </template>
 
@@ -18,7 +16,7 @@ const router = useRouter()
 .header {
   width 100%
   height 100%
-  background: #fff
+  background #fff
   display flex
   justify-content flex-start
   align-items center

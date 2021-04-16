@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 // @ts-ignore
-import Header from '../src/components/Headr.vue'
+import Header from '../src/components/Header.vue'
 
 describe('Header.vue', () => {
   it('renders', () => {

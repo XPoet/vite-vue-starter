@@ -10,10 +10,9 @@
 
 ## 搭建教程
 
-- 掘金 https://juejin.cn/post/6951649464637636622
+- [掘金](https://juejin.cn/post/6951649464637636622)
 
-- 博客 https://xpoet.cn/2021/04/从-0-开始手把手带你搭建一套规范的-Vue3.x-项目工程环境/
-
+- [XPoet's Blog](https://xpoet.cn/2021/04/%E4%BB%8E-0-%E5%BC%80%E5%A7%8B%E6%89%8B%E6%8A%8A%E6%89%8B%E5%B8%A6%E4%BD%A0%E6%90%AD%E5%BB%BA%E4%B8%80%E5%A5%97%E8%A7%84%E8%8C%83%E7%9A%84-Vue3.x-%E5%B7%A5%E7%A8%8B%E5%8C%96%E9%A1%B9%E7%9B%AE/)
 
 ## 技术栈
 

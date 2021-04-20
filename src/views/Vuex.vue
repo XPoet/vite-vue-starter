@@ -1,34 +1,39 @@
+<!--
+ * @Author: Aliom
+ * @Date: 2021-04-20 10:03:47
+ * @LastEditors: Aliom
+ * @LastEditTime: 2021-04-20 10:30:28
+-->
 <template>
   <div class="vuex-container page-container">
     <div class="page-title">Vuex Test Page</div>
-    <p>store count is: {{ count }}</p>
-    <p>store double is: {{ double }}</p>
-    <el-button type="primary" @click="add">add</el-button>
+    <p>store Root is: {{ text }}</p>
+    <p>store doubleCount is: {{ count }}</p>
+    <el-button type="primary" @click="double">double</el-button>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, reactive, computed, toRefs } from 'vue'
-import { useStore } from 'vuex'
+import { useStore } from '../store'
 
 export default defineComponent({
   name: 'Vuex',
 
   setup() {
     const store = useStore()
-
     const reactiveData = reactive({
-      count: computed(() => store.state.count),
-      double: computed(() => store.getters.double)
+      text: computed(() => store.state.text),
+      count: computed(() => store.state.numFactoryModule.count)
     })
 
-    const add = () => {
-      store.commit('increment')
+    const double = () => {
+      store.commit('numFactoryModule/DOUBLE_COUNT')
     }
 
     return {
       ...toRefs(reactiveData),
-      add
+      double
     }
   }
 })

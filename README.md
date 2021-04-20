@@ -6,13 +6,25 @@
 [![Deploy](https://github.com/XPoet/vite-vue3-starter/workflows/deploy/badge.svg)](https://github.com/XPoet/vite-vue3-starter/actions/workflows/deploy.yml)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-Airbnb-hotpink.svg)](https://github.com/lin-123/javascript)
 
-![demo](https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/vite-vue3/image.60j460o44fo0.png)
+## 在线预览
+
+https://vite-vue3-starter.xpoet.cn/
+
+## 交流群
+
+- 扫描下方二维码，加入微信交流群，欢迎小伙伴们畅所欲言，包括但不限于前端技术问题，大家一起成长~
+
+  <img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/FE-Cheerleaders/Group-QR-Code.png" width="35%" />
+
+- 如果上面的二维码失效，可关注公众号《前端鼓励师》，添加作者微信，再由作者拉你进群~
+
+  <img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/FE-Cheerleaders/FEC-Card.76dbi8n1bkk0.png" width="80%" />
+
 
 ## 搭建教程
 
-- [掘金](https://juejin.cn/post/6951649464637636622)
+1️⃣&nbsp;[掘金](https://juejin.cn/post/6951649464637636622)&emsp;2️⃣&nbsp;[XPoet's Blog](https://xpoet.cn/2021/04/%E4%BB%8E-0-%E5%BC%80%E5%A7%8B%E6%89%8B%E6%8A%8A%E6%89%8B%E5%B8%A6%E4%BD%A0%E6%90%AD%E5%BB%BA%E4%B8%80%E5%A5%97%E8%A7%84%E8%8C%83%E7%9A%84-Vue3.x-%E5%B7%A5%E7%A8%8B%E5%8C%96%E9%A1%B9%E7%9B%AE/)
 
-- [XPoet's Blog](https://xpoet.cn/2021/04/%E4%BB%8E-0-%E5%BC%80%E5%A7%8B%E6%89%8B%E6%8A%8A%E6%89%8B%E5%B8%A6%E4%BD%A0%E6%90%AD%E5%BB%BA%E4%B8%80%E5%A5%97%E8%A7%84%E8%8C%83%E7%9A%84-Vue3.x-%E5%B7%A5%E7%A8%8B%E5%8C%96%E9%A1%B9%E7%9B%AE/)
 
 ## 技术栈
 

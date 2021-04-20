@@ -1,4 +1,4 @@
-import NumFactoryStateTypes from '../store/modules/NumFactory/interface'
+import NumFactoryStateTypes from './modules/NumFactory/types'
 
 export default interface RootStareTypes {
   text: string

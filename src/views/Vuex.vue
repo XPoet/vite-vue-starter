@@ -1,9 +1,3 @@
-<!--
- * @Author: Aliom
- * @Date: 2021-04-20 10:03:47
- * @LastEditors: Aliom
- * @LastEditTime: 2021-04-20 10:30:28
--->
 <template>
   <div class="vuex-container page-container">
     <div class="page-title">Vuex Test Page</div>

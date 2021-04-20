@@ -1,27 +1,20 @@
-/*
- * @Author: Aliom
- * @Date: 2021-04-20 10:03:47
- * @LastEditors: Aliom
- * @LastEditTime: 2021-04-20 10:28:54
- */
-import { Module } from "vuex";
-import NumFactoryStareTypes from './interface';
-import RootStateTypes from '../../interface';
-
+import { Module } from 'vuex'
+import NumFactoryStateTypes from './types'
+import RootStateTypes from '../../types'
 
 // Create a new store Modules.
-const numFactoryModule: Module<NumFactoryStareTypes, RootStateTypes> = {
+const numFactoryModule: Module<NumFactoryStateTypes, RootStateTypes> = {
+  namespaced: true,
   state: {
     name: 'numFactory-module',
     count: 1
   },
   mutations: {
-    DOUBLE_COUNT(state) {
-      state.count = 2 * state.count;
+    DOUBLE_COUNT(state: NumFactoryStateTypes) {
+      state.count *= 2
     }
   },
-  actions: {
-  },
+  actions: {}
 }
 
-export default numFactoryModule;
+export default numFactoryModule

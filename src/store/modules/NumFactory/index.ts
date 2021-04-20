@@ -11,7 +11,6 @@ import RootStateTypes from '../../interface';
 
 // Create a new store Modules.
 const numFactoryModule: Module<NumFactoryStareTypes, RootStateTypes> = {
-  namespaced: process.env.NODE_ENV !== 'production',
   state: {
     name: 'numFactory-module',
     count: 1

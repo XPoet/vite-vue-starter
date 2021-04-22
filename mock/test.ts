@@ -1,6 +1,5 @@
 import { MockMethod } from 'vite-plugin-mock'
 
-
 const mockArr = [
   {
     url: '/api/get',
@@ -34,7 +33,7 @@ const mockArr = [
         code: 0,
         message: 'ok',
         data: {
-          name:'Mock'
+          name: 'Mock'
         }
       }
     }

@@ -4,11 +4,11 @@ const mockArr = [
   {
     url: '/api/get',
     method: 'get',
-    response: ({ query }) => {
+    response: (res: { query: any }) => {
       return {
         code: 0,
         data: {
-          name: 'vben'
+          name: res.query
         }
       }
     }
@@ -27,8 +27,8 @@ const mockArr = [
   {
     url: '/api/test',
     method: 'get',
-    response: ({ body }) => {
-      console.log('mock funciton: /api/test/ ----', body)
+    response: (res: { body: any }) => {
+      console.log('mock funciton: /api/test/ ----', res.body)
       return {
         code: 0,
         message: 'ok',

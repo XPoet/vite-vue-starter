@@ -46,6 +46,11 @@ export default defineComponent({
           name: 'Test',
           isActive: false,
           path: '/test'
+        },
+        {
+          name: 'Mock',
+          isActive: false,
+          path: '/mock'
         }
       ],
 

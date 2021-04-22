@@ -1,20 +1,22 @@
 <template>
-  <div class="axios-container page-container">
+  <div class="mock-container page-container">
     <div class="page-title">Axios Test Page</div>
     <div class="user-info-container">
       <el-card class="box-card">
         <template #header>
           <div class="card-header">
-            <span>XPoet</span>
-            <el-button class="button" type="text" @click="getUserInfo"
-              >点击获取XPoet信息
+            <span>Mock</span>
+            <el-button class="button" type="text" @click="getTestInfo"
+              >Click to get mock
             </el-button>
           </div>
         </template>
         <div class="info-list-box" v-loading="loading">
-          <div class="text item" v-if="userInfo?.name">name: {{ userInfo?.name }}</div>
-          <div class="text item" v-if="userInfo?.bio">bio: {{ userInfo?.bio }}</div>
-          <div class="text item" v-if="userInfo?.blog">blog: {{ userInfo?.blog }}</div>
+          <div class="text item" v-if="mockInfo?.code">code: {{ mockInfo?.code }}</div>
+          <div class="text item" v-if="mockInfo?.data">data: {{ mockInfo?.data }}</div>
+          <div class="text item" v-if="mockInfo?.message">
+            msg: {{ mockInfo?.message }}
+          </div>
         </div>
       </el-card>
     </div>
@@ -26,18 +28,20 @@ import { defineComponent, ref, Ref } from 'vue'
 import axios from '../utils/axios'
 
 export default defineComponent({
-  name: 'Axios',
+  name: 'Mock',
   setup() {
-    const userInfo: Ref = ref(null)
+    let mockInfo: Ref = ref(null)
     const loading = ref(false)
 
-    const getUserInfo = () => {
+    const getTestInfo = () => {
       loading.value = true
-      axios
-        .get('/users/XPoet')
+      axios({
+        method: 'get',
+        url: '/api/test',
+        isMock: true
+      })
         .then((response) => {
-          console.log('response: ', response.data)
-          userInfo.value = response.data
+          mockInfo.value = response.data
           loading.value = false
         })
         .catch((error) => {
@@ -47,9 +51,9 @@ export default defineComponent({
     }
 
     return {
-      userInfo,
+      mockInfo,
       loading,
-      getUserInfo
+      getTestInfo
     }
   }
 })

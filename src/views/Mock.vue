@@ -37,8 +37,8 @@ export default defineComponent({
       loading.value = true
       axios({
         method: 'get',
-        url: '/api/test',
-        isMock: true
+        url: 'api/test'
+        // isMock: true
       })
         .then((response) => {
           mockInfo.value = response.data

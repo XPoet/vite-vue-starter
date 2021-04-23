@@ -4,8 +4,8 @@
   "private": false,
   "description": "A Vite2.x + Vue3 + TypeScript template starter",
   "scripts": {
-    "dev": "vite build && vite --mode dev",
-    "testdev": "vite build &&  vite --mode test",
+    "dev": "vite --mode dev",
+    "testdev": "vite --mode test",
     "prod": "vite build && vite --mode prod",
     "build": "vite build",
     "build-tsc": "vue-tsc --noEmit && vite build",

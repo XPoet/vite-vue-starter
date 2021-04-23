@@ -23,7 +23,7 @@ const baseConfig = {
 const envConfig = {
   dev: {
     host: 'http://api.github.com/',
-    mock: false
+    mock: true
   },
   test: {
     host: 'http://10.10.100.95:8090/',

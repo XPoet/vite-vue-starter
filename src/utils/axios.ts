@@ -1,47 +1,97 @@
-import Axios from 'axios'
-import { ElMessage } from 'element-plus'
+import axios, { AxiosRequestConfig } from 'axios'
+import Cookie from 'cookie-universal'
+import axiosReturnTypes from '../common/types/axiosType'
+import { clearCookieData, clearLocalData } from './storage'
+import config from './config'
+import router from '../router/index'
 
-const baseURL = 'https://api.github.com'
+const // 获取cookie
+  cookies = Cookie()
 
-const axios = Axios.create({
-  baseURL,
-  timeout: 20000 // 请求超时 20s
-})
-
-// 前置拦截器（发起请求之前的拦截）
-axios.interceptors.request.use(
-  (response) => {
-    /**
-     * 根据你的项目实际情况来对 config 做处理
-     * 这里对 config 不做任何处理，直接返回
-     */
-    return response
-  },
-  (error) => {
-    return Promise.reject(error)
+// 请求参数处理
+function formatOption(option: AxiosRequestConfig): AxiosRequestConfig {
+  const options: AxiosRequestConfig = option
+  // url处理
+  if (typeof options.url === 'undefined') {
+    throw new Error('API:request missing parameter <url>')
+  } else {
+    // 拼接host域名
+    options.url = config.apiAppName(options.url)
   }
-)
 
-// 后置拦截器（获取到响应时的拦截）
-axios.interceptors.response.use(
-  (response) => {
-    /**
-     * 根据你的项目实际情况来对 response 和 error 做处理
-     * 这里对 response 和 error 不做任何处理，直接返回
-     */
-    return response
-  },
-  (error) => {
-    if (error.response && error.response.data) {
-      const code = error.response.status
-      const msg = error.response.data.message
-      ElMessage.error(`Code: ${code}, Message: ${msg}`)
-      console.error(`[Axios Error]`, error.response)
-    } else {
-      ElMessage.error(`${error}`)
+  // 如果是get请求，把data中的数据，qs后连接到url后面
+  if (options.method === 'get' || options.method === 'delete') {
+    if (!(options.data || option.data == null || option.data === undefined)) {
+      options.params = options.data
     }
-    return Promise.reject(error)
   }
-)
 
-export default axios
+  // timeout处理
+  if (typeof options.timeout === 'undefined') {
+    options.timeout = config.reqTimeout || 15000
+  }
+
+  // header处理
+  options.headers = options.headers || {}
+  options.headers = {
+    // 'token': cookies && cookies.get(config.authName) || '',
+    ...(cookies && cookies.get(config.authName)
+      ? { token: cookies.get(config.authName) }
+      : {}),
+    'Content-Type': 'application/json;charset=utf-8',
+    ...config.headers,
+    ...options.headers
+  }
+  return options
+}
+
+// 处理登录失效
+function handleLoginInvalid() {
+  // 登录失效 清除cookie里的token与localStorage里用户信息
+  clearCookieData(config.authName)
+  clearLocalData(config.authInfo)
+  const url = `${config.loginInvalidRedirectUrl}`
+  router.push(url)
+}
+
+// 处理返回的结果
+export function handleResponse(response: any) {
+  const { data, status, statusText } = response
+  const { code } = data
+
+  // 根据自己项目的状态码
+  if (status === 401 || code === 401 || code === 403) {
+    // 登录失效处理
+    handleLoginInvalid()
+  }
+
+  return {
+    code: 0,
+    msg: statusText,
+    status,
+    ...(data.data !== undefined || data.code !== undefined || data.msg !== undefined
+      ? data
+      : { data })
+  }
+}
+
+// 请求方法封装成Promise
+function request(options: AxiosRequestConfig): Promise<axiosReturnTypes> {
+  return new Promise((resolve) => {
+    try {
+      axios(options).then((response) => {
+        resolve(handleResponse(response))
+      })
+    } catch (error) {
+      resolve({ code: -1, msg: error.message, errorData: error })
+    }
+  })
+}
+
+function init(options: AxiosRequestConfig): Promise<axiosReturnTypes> {
+  const params = formatOption(options)
+
+  return request(params)
+}
+
+export default init

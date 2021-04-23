@@ -4,7 +4,9 @@
   "private": false,
   "description": "A Vite2.x + Vue3 + TypeScript template starter",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite build && vite --mode dev",
+    "testdev": "vite build &&  vite --mode test",
+    "prod": "vite build && vite --mode prod",
     "build": "vite build",
     "build-tsc": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
@@ -40,7 +42,9 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "cookie-universal": "^2.1.4",
     "element-plus": "^1.0.2-beta.36",
+    "qs": "^6.10.1",
     "vue": "^3.0.5",
     "vue-router": "^4.0.6",
     "vuex": "^4.0.0"
@@ -49,6 +53,7 @@
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
     "@types/jest": "^26.0.22",
+    "@types/qs": "^6.9.6",
     "@typescript-eslint/eslint-plugin": "^4.21.0",
     "@typescript-eslint/parser": "^4.21.0",
     "@vitejs/plugin-vue": "^1.2.1",

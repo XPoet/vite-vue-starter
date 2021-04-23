@@ -23,7 +23,7 @@
 
 <script lang="ts">
 import { defineComponent, ref, Ref } from 'vue'
-import Serv from '../api/axios'
+import axios from '../utils/axios'
 
 export default defineComponent({
   name: 'Axios',
@@ -31,12 +31,19 @@ export default defineComponent({
     const userInfo: Ref = ref(null)
     const loading = ref(false)
 
-    const getUserInfo = async () => {
+    const getUserInfo = () => {
       loading.value = true
-      const name = 'XPoet'
-      const data = await Serv.getXPoet({ name })
-      userInfo.value = data.data
-      loading.value = false
+      axios
+        .get('/users/XPoet')
+        .then((response) => {
+          console.log('response: ', response.data)
+          userInfo.value = response.data
+          loading.value = false
+        })
+        .catch((error) => {
+          loading.value = false
+          console.error(error)
+        })
     }
 
     return {

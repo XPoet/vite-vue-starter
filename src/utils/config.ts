@@ -1,7 +1,5 @@
 // 基础共同的配置
 const baseConfig = {
-  footerCopyLink: 'https://beian.miit.gov.cn',
-  // cookie/localstorage令牌缓存的名字
   authName: 'token',
   // 缓存用户信息的字段
   authInfo: 'userInfo',
@@ -12,7 +10,7 @@ const baseConfig = {
   // 登录成功，默认跳转的url
   loginSuccessRedirectUrl: '/',
   // token失效，跳转的url
-  loginInvalidRedirectUrl: '/user/login',
+  loginInvalidRedirectUrl: '/',
   // 请求超时时间设置
   reqTimeout: 10000,
   // headers所存放的常量

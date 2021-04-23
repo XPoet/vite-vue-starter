@@ -8,13 +8,25 @@ const axios = Axios.create({
   timeout: 20000 // 请求超时 20s
 })
 
+declare module 'axios' {
+  // eslint-disable-next-line no-unused-vars
+  interface AxiosRequestConfig {
+    // add mock switch
+    isMock?: boolean
+  }
+}
+
 // 前置拦截器（发起请求之前的拦截）
 axios.interceptors.request.use(
   (response) => {
     /**
      * 根据你的项目实际情况来对 config 做处理
-     * 这里对 config 不做任何处理，直接返回
      */
+    // mock switch
+    if (response.isMock) {
+      // eslint-disable-next-line no-param-reassign
+      response.baseURL = ''
+    }
     return response
   },
   (error) => {

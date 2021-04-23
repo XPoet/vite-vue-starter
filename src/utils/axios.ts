@@ -8,6 +8,12 @@ const axios = Axios.create({
   timeout: 20000 // 请求超时 20s
 })
 
+declare module 'axios' {
+  interface AxiosRequestConfig {
+    isMock?: boolean
+  }
+}
+
 // 前置拦截器（发起请求之前的拦截）
 axios.interceptors.request.use(
   (response) => {

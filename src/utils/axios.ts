@@ -9,7 +9,9 @@ const axios = Axios.create({
 })
 
 declare module 'axios' {
+  // eslint-disable-next-line no-unused-vars
   interface AxiosRequestConfig {
+    // add mock switch
     isMock?: boolean
   }
 }
@@ -19,8 +21,12 @@ axios.interceptors.request.use(
   (response) => {
     /**
      * 根据你的项目实际情况来对 config 做处理
-     * 这里对 config 不做任何处理，直接返回
      */
+    // mock switch
+    if (response.isMock) {
+      // eslint-disable-next-line no-param-reassign
+      response.baseURL = ''
+    }
     return response
   },
   (error) => {

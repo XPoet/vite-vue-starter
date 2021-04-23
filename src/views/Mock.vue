@@ -30,7 +30,7 @@ import axios from '../utils/axios'
 export default defineComponent({
   name: 'Mock',
   setup() {
-    let mockInfo: Ref = ref(null)
+    const mockInfo: Ref = ref(null)
     const loading = ref(false)
 
     const getTestInfo = () => {

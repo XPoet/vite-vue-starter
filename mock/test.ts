@@ -28,7 +28,7 @@ const mockArr = [
     url: '/api/test',
     method: 'get',
     response: (res: { body: any }) => {
-      console.log('mock funciton: /api/test/ ----', res.body)
+      console.log('mock funciton: /api/test/ ----', res)
       return {
         code: 0,
         message: 'ok',

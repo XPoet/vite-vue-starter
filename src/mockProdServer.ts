@@ -1,10 +1,11 @@
-import { createProdMockServer } from 'vite-plugin-mock/es/createProdMockServer';
+import { createProdMockServer } from 'vite-plugin-mock/es/createProdMockServer'
 
-// 逐一导入您的mock.ts文件
-// 如果使用vite.mock.config.ts，只需直接导入文件
-// 可以使用 import.meta.glob功能来进行全部导入
-import testModule from '../mock/test';
+// import your mock.ts
+// you can import only one file if you use vite.mock.config.ts
+// aslo can import.meta.glob to import all files
+import testModule from '../mock/test'
 
+// eslint-disable-next-line import/prefer-default-export
 export function setupProdMockServer() {
-  createProdMockServer([...testModule]);
+  createProdMockServer([...testModule])
 }

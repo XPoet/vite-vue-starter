@@ -1,7 +1,11 @@
 <template>
   <div class="header">
-    <div class="title" @click="router.push('/')">Vite2.x + Vue3.x + TypeScript Starter</div>
-    <div class="go-github" @click="goGitHub"><i class="icon el-icon-s-promotion"></i> GitHub</div>
+    <div class="title" @click="router.push('/')">
+      Vite2.x + Vue3.x + TypeScript Starter
+    </div>
+    <div class="go-github" @click="goGitHub">
+      <i class="icon el-icon-s-promotion"></i> GitHub
+    </div>
   </div>
 </template>
 

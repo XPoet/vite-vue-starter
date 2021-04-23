@@ -26,7 +26,7 @@ const envConfig = {
     mock: true
   },
   test: {
-    host: 'http://10.10.100.95:8090/',
+    host: 'http://api.github.com/',
     mock: false
   },
   prod: {

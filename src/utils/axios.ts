@@ -18,7 +18,7 @@ function formatOption(option: AxiosRequestConfig): AxiosRequestConfig {
     // 拼接host域名
     options.url = config.apiAppName(options.url)
 
-  // 如果是get请求，把data中的数据，qs后连接到url后面
+    // 如果是get请求，把data中的数据，qs后连接到url后面
     if (options.method === 'get' || options.method === 'delete') {
       if (!(options.data || option.data == null || option.data === undefined)) {
         options.params = options.data

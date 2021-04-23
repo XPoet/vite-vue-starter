@@ -17,32 +17,32 @@ function formatOption(option: AxiosRequestConfig): AxiosRequestConfig {
   } else {
     // 拼接host域名
     options.url = config.apiAppName(options.url)
-  }
 
   // 如果是get请求，把data中的数据，qs后连接到url后面
-  if (options.method === 'get' || options.method === 'delete') {
-    if (!(options.data || option.data == null || option.data === undefined)) {
-      options.params = options.data
+    if (options.method === 'get' || options.method === 'delete') {
+      if (!(options.data || option.data == null || option.data === undefined)) {
+        options.params = options.data
+      }
     }
-  }
 
-  // timeout处理
-  if (typeof options.timeout === 'undefined') {
-    options.timeout = config.reqTimeout || 15000
-  }
+    // timeout处理
+    if (typeof options.timeout === 'undefined') {
+      options.timeout = config.reqTimeout || 15000
+    }
 
-  // header处理
-  options.headers = options.headers || {}
-  options.headers = {
-    // 'token': cookies && cookies.get(config.authName) || '',
-    ...(cookies && cookies.get(config.authName)
-      ? { token: cookies.get(config.authName) }
-      : {}),
-    'Content-Type': 'application/json;charset=utf-8',
-    ...config.headers,
-    ...options.headers
+    // header处理
+    options.headers = options.headers || {}
+    options.headers = {
+      // 'token': cookies && cookies.get(config.authName) || '',
+      ...(cookies && cookies.get(config.authName)
+        ? { token: cookies.get(config.authName) }
+        : {}),
+      'Content-Type': 'application/json;charset=utf-8',
+      ...config.headers,
+      ...options.headers
+    }
+    return options
   }
-  return options
 }
 
 // 处理登录失效

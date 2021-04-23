@@ -1,9 +1,9 @@
-import Axios from 'axios'
+import Axios, { AxiosInstance } from 'axios'
 import { ElMessage } from 'element-plus'
 
 const baseURL = 'https://api.github.com'
 
-const axios = Axios.create({
+const axios: AxiosInstance = Axios.create({
   baseURL,
   timeout: 20000 // 请求超时 20s
 })

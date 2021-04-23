@@ -1,15 +1,18 @@
 import { createApp } from 'vue'
-import ElementPlus from 'element-plus'
-import App from './App.vue'
+import { ElButton, ElCard, ElLoading } from 'element-plus'
 
+import App from './App.vue'
 import router from './router/index'
 import { key, store } from './store'
 
-import 'element-plus/lib/theme-chalk/index.css'
 import './style/basic.styl'
 
-const app = createApp(App)
-app.use(router)
-app.use(store, key)
-app.use(ElementPlus)
-app.mount('#app')
+createApp(App)
+  .use(router)
+  .use(store, key)
+
+  // 按需载入 Element Plus
+  .use(ElButton)
+  .use(ElCard)
+  .use(ElLoading)
+  .mount('#app')

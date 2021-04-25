@@ -5,8 +5,15 @@ import { clearCookieData, clearLocalData } from './storage'
 import config from './config'
 import router from '../router/index'
 
-const // 获取cookie
-  cookies = Cookie()
+// 获取cookie
+const cookies = Cookie()
+
+declare module 'axios' {
+  // eslint-disable-next-line no-unused-vars
+  interface AxiosRequestConfig {
+    mock?: boolean
+  }
+}
 
 // 请求参数处理
 function formatOption(option: AxiosRequestConfig): AxiosRequestConfig {
@@ -16,7 +23,7 @@ function formatOption(option: AxiosRequestConfig): AxiosRequestConfig {
     throw new Error('API:request missing parameter <url>')
   } else {
     // 拼接host域名
-    options.url = config.apiAppName(options.url)
+    options.url = config.apiAppName(options.url, options.mock)
 
     // 如果是get请求，把data中的数据，qs后连接到url后面
     if (options.method === 'get' || options.method === 'delete') {

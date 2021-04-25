@@ -37,11 +37,13 @@ export default defineComponent({
       loading.value = true
       axios({
         method: 'get',
-        url: 'api/test'
-        // isMock: true
+        url: 'api/test',
+        mock: true
       })
         .then((response) => {
           mockInfo.value = response.data
+          // eslint-disable-next-line no-alert
+          alert(response.data.name)
           loading.value = false
         })
         .catch((error) => {

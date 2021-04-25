@@ -21,7 +21,7 @@ const baseConfig = {
 const envConfig = {
   dev: {
     host: 'http://api.github.com/',
-    mock: true
+    mock: false
   },
   test: {
     host: 'http://api.github.com/',
@@ -36,7 +36,7 @@ const envConfig = {
 // 合并配置
 const config = Object.assign(baseConfig, envConfig[baseConfig.env])
 
-const getApiAppName = (url: string) => {
+const getApiAppName = (url: string, isMock: boolean) => {
   if (!url) {
     return ''
   }
@@ -45,7 +45,7 @@ const getApiAppName = (url: string) => {
   }
 
   // 判断传入数据是否用mock
-  if (config.mock && (config.env === 'loc' || config.env === 'dev')) {
+  if ((config.mock || isMock) && (config.env === 'loc' || config.env === 'dev')) {
     return `${url}`
   }
 

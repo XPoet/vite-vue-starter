@@ -1,18 +1,9 @@
 import { createApp } from 'vue'
-import { ElButton, ElCard, ElLoading } from 'element-plus'
-
+import importUiFramework from '@/utils/import-ui-framework'
+import router from '@/router/index'
+import { key, store } from '@/store'
 import App from './App.vue'
-import router from './router/index'
-import { key, store } from './store'
+import '@/style/basic.styl'
 
-import './style/basic.styl'
-
-createApp(App)
-  .use(router)
-  .use(store, key)
-
-  // 按需载入 Element Plus
-  .use(ElButton)
-  .use(ElCard)
-  .use(ElLoading)
-  .mount('#app')
+const app = createApp(App)
+importUiFramework(app).use(router).use(store, key).mount('#app')

@@ -1,4 +1,4 @@
 export default interface NumFactoryStateTypes {
-  name: String
+  name: string
   count: number
 }

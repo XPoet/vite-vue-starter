@@ -10,15 +10,11 @@
 
 https://vite-vue3-starter.xpoet.cn/
 
-## 交流群
+## 前端技术交流群
 
-- 扫描下方二维码，加入微信交流群，欢迎小伙伴们畅所欲言，包括但不限于前端技术问题，大家一起成长~
+因群成员大于 200 人，需要您关注公众号《前端鼓励师》，添加作者微信，再由作者拉你进群~
 
-  <img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/FE-Cheerleaders/Group-QR-Code.png" width="35%" />
-
-- 如果上面的二维码失效，可关注公众号《前端鼓励师》，添加作者微信，再由作者拉你进群~
-
-  <img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/FE-Cheerleaders/FEC-Card.76dbi8n1bkk0.png" width="80%" />
+<img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/FE-Cheerleaders/FEC-Card.76dbi8n1bkk0.png" width="80%" />
 
 
 ## 搭建教程

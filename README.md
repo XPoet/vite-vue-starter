@@ -39,6 +39,17 @@ https://vite-vue3-starter.xpoet.cn/
 - 自动部署：[GitHub Actions](https://docs.github.com/cn/actions/learn-github-actions)
 
 ## 快速开始
+### 获取项目
+#### 1. npm
+```shell
+npm install vite-vue-ts-cli -g
+
+vite-vue-ts-create myapp
+```
+#### 2.Git
+```shell
+git clone https://github.com/XPoet/vite-vue3-starter.git
+```
 
 ### 安装依赖
 
@@ -59,6 +70,13 @@ npm run dev
 ```sh
 npm run build
 ```
+
+## Q&A
+#### 1.git cz不生效
+请全局安装cz
+
+#### 2.husky 报错
+安装好husky依赖后，如果报错，请在husky 执行 git init
 
 ## 许可
 

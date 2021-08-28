@@ -10,12 +10,11 @@
 
 https://vite-vue3-starter.xpoet.cn/
 
-## 前端技术交流群
+## 交流群
 
-因群成员大于 200 人，需要您关注公众号《前端鼓励师》，添加作者微信，再由作者拉你进群~
+欢迎小伙伴们加入前端技术交流群，因群成员大于 200 人，需要您关注公众号《前端鼓励师》，添加作者微信，再由作者拉你进群~
 
 <img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/FE-Cheerleaders/FEC-Card.76dbi8n1bkk0.png" width="80%" />
-
 
 ## 搭建教程
 
@@ -39,16 +38,21 @@ https://vite-vue3-starter.xpoet.cn/
 - 自动部署：[GitHub Actions](https://docs.github.com/cn/actions/learn-github-actions)
 
 ## 快速开始
+
 ### 获取项目
-#### 1. npm
-```shell
+
+#### 使用 Git
+
+```sh
+git clone https://github.com/XPoet/vite-vue3-starter.git
+```
+
+#### 使用 NPM
+
+```sh
 npm install vite-vue-ts-cli -g
 
 vite-vue-ts-create myapp
-```
-#### 2.Git
-```shell
-git clone https://github.com/XPoet/vite-vue3-starter.git
 ```
 
 ### 安装依赖
@@ -72,11 +76,14 @@ npm run build
 ```
 
 ## Q&A
-#### 1.git cz不生效
-请全局安装cz
 
-#### 2.husky 报错
-安装好husky依赖后，如果报错，请在husky 执行 git init
+1. Q: `git cz` 不生效  
+
+   A: 请全局安装 commitizen，命令：`npm install commitizen -g`
+
+2. Q: husky 报错  
+
+   A: 请检查你的项目下是否有 Git 仓库，没有则先 `git init` 初始化一个
 
 ## 许可
 

@@ -8,15 +8,14 @@ import { resolve } from 'path'
 export default defineConfig({
   plugins: [
     vue(),
-    // 按需导出 Element Plus 组件
+    // 按需导入 Element Plus 组件
     styleImport({
       libs: [
         {
           libraryName: 'element-plus',
-          esModule: true,
-          ensureStyleFile: true,
+          base: 'element-plus/theme-chalk/base.css',
           resolveStyle: (name) => {
-            return `element-plus/lib/theme-chalk/${name}.css`
+            return `element-plus/theme-chalk/${name}.css`
           },
           resolveComponent: (name) => {
             return `element-plus/lib/${name}`

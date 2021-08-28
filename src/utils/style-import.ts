@@ -1,6 +1,5 @@
 import { App } from 'vue'
 import { ElIcon, ElLoading, ElCard, ElButton } from 'element-plus'
-import 'element-plus/lib/theme-chalk/base.css'
 
 /**
  * 按需载入 Element Plus 组件

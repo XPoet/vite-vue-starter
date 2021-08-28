@@ -18,7 +18,7 @@ export default defineConfig({
             return `element-plus/theme-chalk/${name}.css`
           },
           resolveComponent: (name) => {
-            return `element-plus/lib/${name}`
+            return `element-plus/lib/components/${name.split('-')[1]}`
           }
         }
       ]

@@ -8,7 +8,7 @@ import { resolve } from 'path'
 export default defineConfig({
   plugins: [
     vue(),
-    // 按需载入 Element Plus
+    // 按需导出 Element Plus 组件
     styleImport({
       libs: [
         {

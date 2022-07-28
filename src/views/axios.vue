@@ -15,7 +15,7 @@ const getUserInfo = () => {
 </script>
 
 <template>
-  <div>axios</div>
+  <div class="page-title">Axios test</div>
   <el-button @click="getUserInfo">点击获取 XPoet 用户信息</el-button>
   <el-card v-if="userInfo">
     <div>name: {{ userInfo.name }}</div>

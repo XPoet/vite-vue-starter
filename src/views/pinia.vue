@@ -11,7 +11,7 @@ const changeCount = () => {
 </script>
 
 <template>
-  <div>pinia</div>
+  <div class="page-title">Pinia test</div>
   <div>store.state.msg: {{ msg }}</div>
   <div>store.state.count: {{ count }}</div>
   <div>store.state.doubleCount: {{ doubleCount }}</div>

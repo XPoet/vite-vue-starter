@@ -1,7 +1,4 @@
-<script setup lang="ts">
-import vvsHeader from '@/components/layout/vvs-header.vue'
-import vvsNav from '@/components/layout/vvs-nav.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <main class="main-container">

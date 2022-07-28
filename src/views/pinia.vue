@@ -15,12 +15,11 @@ const changeCount = () => {
   <div>store.state.msg: {{ msg }}</div>
   <div>store.state.count: {{ count }}</div>
   <div>store.state.doubleCount: {{ doubleCount }}</div>
-  <div><button @click="changeCount">点击改变 state.count 值</button></div>
+  <div><el-button @click="changeCount">点击改变 state.count 值</el-button></div>
 </template>
 
 <style scoped lang="stylus">
 button {
-  margin 10px
-  font-size 16px
+  margin-top 10px
 }
 </style>

@@ -3,10 +3,21 @@ import vue from '@vitejs/plugin-vue'
 // 如果编辑器提示 path 模块找不到，安装 @types/node 即可
 // pnpm add @types/node -D
 import { resolve } from 'path'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    AutoImport({
+      resolvers: [ElementPlusResolver()],
+    }),
+    Components({
+      resolvers: [ElementPlusResolver()],
+    }),
+  ],
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src') // 设置 `@` 指向 `src` 目录

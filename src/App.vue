@@ -1,10 +1,8 @@
-<script setup lang="ts">
-import vvsMain from '@/components/layout/vvs-main.vue'
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="app-container">
+    <!-- 使用 unplugin-auto-import 自动全局导入组件，无需再次导入 -->
     <vvs-main />
   </div>
 </template>

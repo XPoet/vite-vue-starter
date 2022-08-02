@@ -1,16 +1,35 @@
-# Vue 3 + TypeScript + Vite
+# Vite 3.x + Vue 3.x + TypeScript Starter
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## 快速开始
 
-## Recommended IDE Setup
+注意：本项目使用 Vite 3.x 构建工具，**需要 Node.js 版本 14.18+ / 16+** 。
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+强烈建议使用 pnpm 作为本项目的包管理器。
 
-## Type Support For `.vue` Imports in TS
+pnpm 是一款快速的，节省磁盘空间的包管理工具，目前很多优秀的开源项目已逐步使用 pnpm，例如：Vue、Vite、Element Plus 等，pnpm 正在慢慢替换掉 npm。
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
+### 安装 pnpm
 
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
+```
+npm install pnpm -g
+```
 
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+更多 pnpm 安装方式查看：https://pnpm.io/zh/installation
+
+### 安装依赖
+
+```bash
+pnpm install
+```
+
+### 启动项目
+
+```bash
+pnpm run dev
+```
+
+### 项目打包
+
+```bash
+pnpm run build
+```

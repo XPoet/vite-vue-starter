@@ -29,11 +29,11 @@ axios.interceptors.response.use(
      * 此处根据项目实际情况来对 response 做处理
      * 这里对 response 只做简单封装处理
      */
-    return ({
+    return {
       statusCode: response.status,
       data: response.data,
       message: response.statusText
-    })
+    }
   },
   (error) => {
     if (error.response && error.response.data) {

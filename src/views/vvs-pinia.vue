@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
-import { mainStore } from '@/store'
+import mainStore from '@/store'
 
 const store = mainStore()
 const { msg, count, doubleCount } = storeToRefs(store) // store 响应式解构

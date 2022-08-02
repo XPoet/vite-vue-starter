@@ -11,12 +11,10 @@ const goGitHub = () => {
 <template>
   <div class="header">
     <div class="header-left" @click="router.push('/')">
-      <img class="logo" src="/vite.svg" alt="logo">
+      <img class="logo" src="/vite.svg" alt="logo" />
       <span class="name">Vite-Vue3-Starter</span>
     </div>
-    <div class="header-right" @click="goGitHub">
-      GitHub
-    </div>
+    <div class="header-right" @click="goGitHub">GitHub</div>
   </div>
 </template>
 

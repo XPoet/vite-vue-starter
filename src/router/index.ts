@@ -1,32 +1,29 @@
-import {
-    createRouter,
-    createWebHashHistory,
-    RouteRecordRaw
-} from 'vue-router'
-import Home from '@/views/home.vue'
-import Pinia from '@/views/pinia.vue'
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
+import VvsHome from '@/views/vvs-home.vue'
+import VvsPinia from '@/views/vvs-pinia.vue'
+import VvsAxios from '@/views/vvs-axios.vue'
 
 const routes: Array<RouteRecordRaw> = [
-    {
-        path: '/',
-        name: 'Home',
-        component: Home
-    },
-    {
-        path: '/pinia',
-        name: 'Pinia',
-        component: Pinia
-    },
-    {
-        path: '/axios',
-        name: 'Axios',
-        component: () => import('@/views/axios.vue') // 懒加载组件
-    }
+  {
+    path: '/',
+    name: 'Home',
+    component: VvsHome
+  },
+  {
+    path: '/pinia',
+    name: 'Pinia',
+    component: VvsPinia
+  },
+  {
+    path: '/axios',
+    name: 'Axios',
+    component: VvsAxios
+  }
 ]
 
 const router = createRouter({
-    history: createWebHashHistory(),
-    routes
+  history: createWebHashHistory(),
+  routes
 })
 
 export default router

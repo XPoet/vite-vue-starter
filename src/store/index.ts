@@ -1,7 +1,7 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 
-export const mainStore = defineStore('main', () => {
+const mainStore = defineStore('main', () => {
   // state(ref)
   const msg = ref<string>('Hello Pinia')
   const count = ref<number>(0)
@@ -13,10 +13,15 @@ export const mainStore = defineStore('main', () => {
 
   // actions(function)
   const increment = () => {
-    count.value++
+    count.value += 1
   }
 
   return {
-    msg, count, doubleCount, increment
+    msg,
+    count,
+    doubleCount,
+    increment
   }
 })
+
+export default mainStore

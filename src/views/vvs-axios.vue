@@ -5,12 +5,15 @@ import axios from '@/utils/axios'
 const userInfo = ref(null)
 
 const getUserInfo = () => {
-  axios.get('/users/XPoet').then(res => {
-    console.log('userInfo >> ', res)
-    userInfo.value = res.data
-  }).catch(err => {
-    console.error('[userInfo] ', err)
-  })
+  axios
+    .get('/users/XPoet')
+    .then((res) => {
+      console.log('userInfo >> ', res)
+      userInfo.value = res.data
+    })
+    .catch((err) => {
+      console.error('[userInfo] ', err)
+    })
 }
 </script>
 

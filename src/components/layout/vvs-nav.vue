@@ -8,7 +8,7 @@ const router = useRouter()
 const navList = ref([
   {
     name: 'Home',
-    isActive: false,
+    isActive: true,
     path: '/'
   },
   {
@@ -36,10 +36,10 @@ const navClick = (e: NavItem) => {
 }
 
 watch(
-    () => router.currentRoute.value,
-    (_n) => {
-      changeNavActive(_n.path)
-    }
+  () => router.currentRoute.value,
+  (_n) => {
+    changeNavActive(_n.path)
+  }
 )
 
 onMounted(() => {
@@ -52,11 +52,12 @@ onMounted(() => {
 <template>
   <aside class="nav">
     <ul class="nav-list">
-      <li class="nav-item flex-center"
-          v-for="(nav, index) in navList"
-          :key="index"
-          :class="{ active: nav.isActive }"
-          @click="navClick(nav)"
+      <li
+        class="nav-item flex-center"
+        v-for="(nav, index) in navList"
+        :key="index"
+        :class="{ active: nav.isActive }"
+        @click="navClick(nav)"
       >
         {{ nav.name }}
       </li>

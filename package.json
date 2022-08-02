@@ -9,7 +9,12 @@
     "preview": "vite preview",
     "format": "prettier --write ./src",
     "lint": "eslint --fix ./src --ext .vue,.js,.ts",
-    "lint:style": "stylelint --fix ./src/**/*.{vue,styl}"
+    "lint:style": "stylelint --fix ./src/**/*.{vue,styl}",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{vue,js,ts}": "eslint --fix",
+    "*.{vue,styl}": "stylelint --fix"
   },
   "dependencies": {
     "axios": "^0.27.2",
@@ -29,6 +34,8 @@
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.3.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "stylelint": "^14.9.1",
     "stylelint-config-rational-order": "^0.1.2",

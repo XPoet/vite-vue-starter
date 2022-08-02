@@ -29,17 +29,17 @@ $left-side-width = 80px
 
 .main-container {
   position absolute
-  left 0
-  right 0
   top 0
+  right 0
   bottom 0
-  width 100%
-  height 100%
-  background $second-background-color
-  box-sizing border-box
+  left 0
   display flex
   flex-direction column
   justify-content space-between
+  box-sizing border-box
+  width 100%
+  height 100%
+  background $second-background-color
 
   .top {
     position relative
@@ -51,43 +51,36 @@ $left-side-width = 80px
 
   .bottom {
     position relative
+    display flex
+    justify-content space-between
     box-sizing border-box
     width 100%
     height 100%
-    display flex
-    justify-content space-between
 
     .left {
       position relative
+      box-sizing border-box
       width $left-side-width
       height 100%
-      box-sizing border-box
     }
 
     .right {
       position relative
+      box-sizing border-box
       width 100%
       height 100%
-      box-sizing border-box
       padding 0 10px 10px 10px
 
       .content {
         position relative
+        box-sizing border-box
         width 100%
         height 100%
+        padding 10px
         background $background-color
         border-radius 5px
-        box-sizing border-box
-        padding 10px
       }
     }
-  }
-}
-
-.page-links {
-  a {
-    font-weight: bold;
-    margin: 0 20px;
   }
 }
 </style>

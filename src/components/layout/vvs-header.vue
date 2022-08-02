@@ -20,21 +20,21 @@ const goGitHub = () => {
 
 <style scoped lang="stylus">
 .header {
+  display flex
+  align-items center
+  justify-content space-between
+  box-sizing border-box
   width 100%
   height 100%
-  background #fff
-  display flex
-  justify-content space-between
-  align-items center
   padding 0 20px
-  box-sizing border-box
   font-weight bold
+  background #fff
 
   .header-left {
-    font-size 20px
-    cursor pointer
     display flex
     align-items center
+    font-size 20px
+    cursor pointer
 
     .name {
       margin-left 5px
@@ -42,8 +42,8 @@ const goGitHub = () => {
   }
 
   .header-right {
-    cursor pointer
     font-size 16px
+    cursor pointer
   }
 }
 </style>

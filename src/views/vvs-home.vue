@@ -16,7 +16,6 @@
 
 <style scoped lang="stylus">
 .home-container {
-
   display flex
   flex-direction column
   align-items center
@@ -37,9 +36,9 @@
   }
 
   .name {
-    font-size 30px
-    font-weight bold
     margin-top 10px
+    font-weight bold
+    font-size 30px
   }
 }
 </style>

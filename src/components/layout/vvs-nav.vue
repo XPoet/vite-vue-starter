@@ -71,10 +71,10 @@ onMounted(() => {
 
 .nav {
   position relative
+  box-sizing border-box
   width 100%
   height 100%
-  box-sizing border-box
-  background: #fff
+  background #fff
 
   .nav-list {
 
@@ -88,10 +88,7 @@ onMounted(() => {
         font-weight bold
         background $second-background-color
       }
-
     }
-
   }
-
 }
 </style>

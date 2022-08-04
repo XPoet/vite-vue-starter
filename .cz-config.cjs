@@ -1,5 +1,5 @@
 module.exports = {
-  // Commit 类型
+  // Commit 类型列表
   types: [
     ['feat', '新增功能', '✨'],
     ['fix', '修复 Bug', '🐛'],
@@ -7,7 +7,7 @@ module.exports = {
     ['style', '不影响代码功能的更改（例如：空格、格式化、补齐分号等）', '🎨'],
     ['refactor', '代码重构（不包括新增功能、修复 Bug）', '🔨'],
     ['perf', '提高性能的代码更改', '📈'],
-    ['test', '新增功能', '✅'],
+    ['test', '添加、修改测试用例', '✅'],
     ['build', '构建流程、外部依赖变更（如升级依赖、修改 Vite 配置等）', '🛠️'],
     ['ci', '修改 CI 配置、脚本', '🔧'],
     ['chore', '对构建过程或辅助工具和库的更改（不影响源文件、测试用例）', '📦'],
@@ -22,6 +22,7 @@ module.exports = {
     };
   }),
 
+  // Scopes 类型列表
   scopes: [
     ['components', '组件相关'],
     ['hooks', 'hook 相关'],
@@ -39,7 +40,7 @@ module.exports = {
   }),
 
   /*
-  // 设置 fix 类型的 scopes
+  // 设置在只有选择了 fix 类型才会出现的 scopes
   scopeOverrides: {
     fix: [
       {name: 'merge'},
@@ -50,10 +51,10 @@ module.exports = {
   },
  */
 
-  allowCustomScopes: true, // 允许自定义 SCOPE
-  allowEmptyScopes: true, // 允许空 SCOPE
-  customScopesName: `${'custom'.padEnd(20)}（自定义 Scope）`,
-  emptyScopesName: `${'empty'.padEnd(20)}（不填 Scope）`,
+  allowCustomScopes: true, // 允许自定义 Scope
+  allowEmptyScopes: true, // 允许空 Scope
+  customScopesName: `${'custom'.padEnd(20)}（自定义 Scope）`, // 选择自定义 Scope 时的描述
+  emptyScopesName: `${'empty'.padEnd(20)}（不填 Scope）`, // 选择空 Scope 时的描述
 
   messages: {
     type: '请选择 Commit 类型：（上下键选择，按 Enter 键确定）',
@@ -77,7 +78,7 @@ module.exports = {
   skipEmptyScopes: false,
 
   subjectLimit: 100 // subject 长度限制
-  // breaklineChar: '|', // It is supported for fields body and footer.
+  // breaklineChar: '|', // 设置换行符
   // footerPrefix : 'ISSUES CLOSED:'
   // askForBreakingChangeFirst : true, // default is false
 }

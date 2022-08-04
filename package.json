@@ -14,8 +14,8 @@
     "commit": "cz"
   },
   "lint-staged": {
-    "*.{vue,js,ts}": "eslint --fix",
-    "*.{vue,styl}": "stylelint --fix"
+    "*.{vue,styl}": "stylelint --fix",
+    "*.{vue,js,ts}": "eslint --fix"
   },
   "config": {
     "commitizen": {
@@ -33,6 +33,8 @@
     "vue-router": "^4.1.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "@types/node": "^18.6.1",
     "@typescript-eslint/eslint-plugin": "^5.31.0",
     "@typescript-eslint/parser": "^5.31.0",

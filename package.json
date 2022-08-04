@@ -10,7 +10,8 @@
     "format": "prettier --write ./src",
     "lint": "eslint --fix ./src --ext .vue,.js,.ts",
     "lint:style": "stylelint --fix ./src/**/*.{vue,styl}",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commit": "cz"
   },
   "lint-staged": {
     "*.{vue,js,ts}": "eslint --fix",
@@ -18,7 +19,10 @@
   },
   "config": {
     "commitizen": {
-      "path": "cz-conventional-changelog"
+      "path": "cz-custom"
+    },
+    "cz-custom": {
+      "config": ".cz-config.cjs"
     }
   },
   "dependencies": {
@@ -35,6 +39,7 @@
     "@vitejs/plugin-vue": "^3.0.0",
     "commitizen": "^4.2.5",
     "cz-conventional-changelog": "^3.3.0",
+    "cz-custom": "^0.0.2",
     "eslint": "^7.32.0 || ^8.2.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",

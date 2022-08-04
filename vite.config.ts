@@ -1,7 +1,9 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-// 如果编辑器提示 path 模块找不到，安装 @types/node 即可
-// pnpm add @types/node -D
+/**
+ * 如果编辑器提示 path 模块找不到，安装 @types/node 即可
+ * pnpm add @types/node -D
+ */
 import { resolve } from 'path'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -12,11 +14,17 @@ export default defineConfig({
   plugins: [
     vue(),
     AutoImport({
-      resolvers: [ElementPlusResolver()],
+      resolvers: [
+        // 自动导入 Element Plus 相关函数，如：ElMessage, ElMessageBox... (带样式)
+        ElementPlusResolver()
+      ]
     }),
     Components({
-      resolvers: [ElementPlusResolver()],
-    }),
+      resolvers: [
+        // 自动导入 Element Plus 组件
+        ElementPlusResolver()
+      ]
+    })
   ],
   resolve: {
     alias: {

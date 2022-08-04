@@ -14,7 +14,9 @@ const goGitHub = () => {
       <img class="logo" src="/vite.svg" alt="logo" />
       <span class="name">Vite-Vue3-Starter</span>
     </div>
-    <div class="header-right" @click="goGitHub">GitHub</div>
+    <div class="header-right flex-center" @click="goGitHub">
+      <el-icon :size="22"><Promotion /></el-icon> GitHub
+    </div>
   </div>
 </template>
 

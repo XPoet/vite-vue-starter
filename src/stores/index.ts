@@ -1,5 +1,4 @@
 import {  defineStore } from 'pinia'
-import { computed, ref } from "vue";
 
 // 在 Setup Store 中：
 // ref() 就是 state 属性

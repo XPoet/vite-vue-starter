@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import MainContainer from '@/components/main-container/main-container.vue'
 </script>
 
 <template>

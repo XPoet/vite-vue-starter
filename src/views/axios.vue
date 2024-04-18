@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import axios from "@/utils/axios.ts";
-import { ref } from "vue";
 
 defineOptions({
   name: 'Axios'

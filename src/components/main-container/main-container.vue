@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import LeftNav from "@/components/left-nav/left-nav.vue";
-
 defineOptions({
   name: 'MainContainer'
 })

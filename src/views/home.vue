@@ -6,6 +6,7 @@ defineOptions({
 
 <template>
 <h1>Home</h1>
+<el-button type="primary"> Element Plus Button </el-button>
 </template>
 
 <style scoped>

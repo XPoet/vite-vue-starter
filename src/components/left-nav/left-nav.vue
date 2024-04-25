@@ -1,16 +1,17 @@
 <script setup lang="ts">
-import router, { routes } from "@/router";
+import router, { routes } from '@/router'
 
-const navList = ref(routes.map(({path, name}) => ({path, name})))
+const navList = ref(routes.map(({ path, name }) => ({ path, name })))
 </script>
 
 <template>
   <ul class="nav-box">
-    <li class="nav-item"
-        :class="{ active: router.currentRoute.value.path === path }"
-        v-for="({path, name}, idx) in navList"
-        :key="idx + path"
-        @click="router.push(path)"
+    <li
+      class="nav-item"
+      :class="{ active: router.currentRoute.value.path === path }"
+      v-for="({ path, name }, idx) in navList"
+      :key="idx + path"
+      @click="router.push(path)"
     >
       {{ name }}
     </li>

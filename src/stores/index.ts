@@ -1,4 +1,4 @@
-import {  defineStore } from 'pinia'
+import { defineStore } from 'pinia'
 
 // 在 Setup Store 中：
 // ref() 就是 state 属性

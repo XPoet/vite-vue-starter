@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier ./src --write"
   },
   "dependencies": {
     "axios": "^1.6.8",
@@ -17,6 +18,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
+    "prettier": "^3.2.5",
     "stylus": "^0.63.0",
     "typescript": "^5.2.2",
     "unplugin-auto-import": "^0.17.5",
